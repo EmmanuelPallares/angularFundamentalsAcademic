@@ -6,6 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  items: any[] = [
+    ['Platano', 10],
+    ['Manzana', 15],
+    ['Aguacate', 30],
+  ]; //Reto *ngFor
+  newItem = ''; //Reto *ngFor
+  newPrice = ''; //Reto *ngFor
+
+  addItem() {
+    this.items.push([this.newItem, this.newPrice]);
+    this.newItem = '';
+    this.newPrice = '';
+  }
+
+  deleteItem(index: number) {
+    this.items.splice(index, 1);
+  }
   name = 'Nicolas';
   age = 18;
   img = 'https://www.w3schools.com/howto/img_avatar.png';
