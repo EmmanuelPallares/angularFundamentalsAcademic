@@ -4,3 +4,34 @@
   overflow: auto;
   background: red;
 }
+.grid_products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+//Tablets
+@media screen and (min-width: 40em) {
+  .grid_products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+  //Desktop
+  @media screen and (min-width: 62em) {
+    .grid_products {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 15px;
+    }
+  }
+}
+
+.message-error {
+  background: red;
+  color: white;
+  opacity: 0;
+  transition: all linear 0.5s;
+  &.invalid {
+    opacity: 1;
+  }
+}
