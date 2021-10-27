@@ -1,3 +1,13 @@
+<h1>ngFor For arrays</h1>
+<div>
+  <div>
+    <div *ngFor="let product of products; let i = index">
+      <h2>{{ product.price }}</h2>
+      <img width="250px" [src]="products[2]" />
+      <p>{{ product.name }}</p>
+    </div>
+  </div>
+</div>
 <h1>Eventos</h1>
 <button [disabled]="btnDisabled">Enviar</button>
 <button (click)="toggleButton()">Toggle Button</button>
