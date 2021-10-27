@@ -9,6 +9,12 @@ import { Product } from './product.model';
 })
 export class AppComponent {
   widthImg = 10;
+
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red',
+  };
   name = 'Nicolas';
   age = 18;
   img = 'https://www.w3schools.com/howto/img_avatar.png';

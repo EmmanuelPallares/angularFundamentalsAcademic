@@ -35,3 +35,15 @@
     opacity: 1;
   }
 }
+
+.line-error {
+  height: 0;
+  border-bottom: 1px solid;
+  border-color: purple;
+  &.invalid {
+    border-color: red;
+  }
+  &.valid {
+    border-color: green;
+  }
+}
