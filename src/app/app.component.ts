@@ -15,6 +15,11 @@ export class AppComponent {
     height: 100,
     background: 'red',
   };
+  register = {
+    name: '',
+    email: '',
+    password: '',
+  };
   name = 'Nicolas';
   age = 18;
   img = 'https://www.w3schools.com/howto/img_avatar.png';
@@ -85,5 +90,8 @@ export class AppComponent {
 
   deleteName(index: number) {
     this.names.splice(index, 1);
+  }
+  onRegister() {
+    console.log(this.register);
   }
 }
